@@ -1,6 +1,6 @@
 <?php
 
-require_once 'funcoes.php';
+require_once 'funcoes.php'; //requeri arquivo.
 
 $contasCorrentes = [
     '123.456.789-10' => [
