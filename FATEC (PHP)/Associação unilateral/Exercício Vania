@@ -1,0 +1,87 @@
+<?php
+ 
+class Pessoa {
+    public $nome;
+    public $telefone;
+ 
+    public function __construct($nome, $telefone) {
+        $this->nome = $nome;
+        $this->telefone = $telefone;
+    }
+}
+ 
+class Proprietario extends Pessoa {
+    public $cpf;
+ 
+    public function __construct($nome, $telefone, $cpf) {
+        parent::__construct($nome, $telefone);
+        $this->cpf = $cpf;
+    }
+}
+ 
+class Profissional extends Pessoa {
+    public $crmv;
+ 
+    public function __construct($nome, $telefone, $crmv) {
+        parent::__construct($nome, $telefone);
+        $this->crmv = $crmv;
+    }
+}
+ 
+class Cachorro {
+    public $nome;
+    public $cor;
+    public $raca;
+    public $dataNascimento;
+    public $proprietario;
+ 
+    public function __construct($nome, $cor, $raca, $dataNascimento, $proprietario) {
+        $this->nome = $nome;
+        $this->cor = $cor;
+        $this->raca = $raca;
+        $this->dataNascimento = $dataNascimento;
+        $this->proprietario = $proprietario;
+    }
+}
+ 
+class Servico {
+    public $descritivo;
+    public $preco;
+ 
+    public function __construct($descritivo, $preco) {
+        $this->descritivo = $descritivo;
+        $this->preco = $preco;
+    }
+}
+ 
+class Atendimento {
+    public $dataAtendimento;
+    public $cachorro;
+    public $servico;
+ 
+    public function __construct($dataAtendimento, $cachorro, $servico) {
+        $this->dataAtendimento = $dataAtendimento;
+        $this->cachorro = $cachorro;
+        $this->servico = $servico;
+    }
+}
+ 
+$proprietario = new Proprietario("João", "123456789", "123.456.789-00");
+$profissional = new Profissional("Maria", "987654321", "CRMV1234");
+$cachorro = new Cachorro("Rex", "Marrom", "Labrador", "2019-01-01", $proprietario);
+$servico = new Servico("Consulta", 50.00);
+$dataAtendimento = "2024-03-25"; 
+ 
+$atendimento = new Atendimento($dataAtendimento, $cachorro, $servico);
+ 
+echo "Data do Atendimento: " . $atendimento->dataAtendimento . "<br>";
+echo "Cachorro: " . $atendimento->cachorro->nome . "<br>";
+echo "Proprietário: " . $atendimento->cachorro->proprietario->nome . "<br>";
+echo "Telefone do Proprietário: " . $atendimento->cachorro->proprietario->telefone . "<br>";
+echo "CPF do Proprietário: " . $atendimento->cachorro->proprietario->cpf . "<br>";
+echo "Profissional: " . $profissional->nome . "<br>";
+echo "CRMV do Profissional: " . $profissional->crmv . "<br>";
+echo "Serviço: " . $atendimento->servico->descritivo . "<br>";
+echo "Preço do Serviço: " . $atendimento->servico->preco . "<br>";
+ 
+?>
