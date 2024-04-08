@@ -1,10 +1,14 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7a03b2e631817bb23138916957a93bdc135e4180
     class Aluno
     {
         public function __construct(
             private string $nome = "",
             private string $cpf = "",
+<<<<<<< HEAD
             private string $celular = "",
             $logradouro = "",
             $numero = "",
@@ -23,6 +27,10 @@
             {
                 $this->endereco[] = new Endereco($logradouro, $numero, $bairro, $cep);
             }
+=======
+            private string $celular = ""
+        ){}
+>>>>>>> 7a03b2e631817bb23138916957a93bdc135e4180
 
             public function getNome()
             {
@@ -31,7 +39,11 @@
 
             public function setNome($nome)
             {
+<<<<<<< HEAD
                         $this->nome = $nome;
+=======
+                        $this->nome = $nome
+>>>>>>> 7a03b2e631817bb23138916957a93bdc135e4180
 
                         return $this;
             }
@@ -60,4 +72,8 @@
                         return $this;
             }
     }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 7a03b2e631817bb23138916957a93bdc135e4180
