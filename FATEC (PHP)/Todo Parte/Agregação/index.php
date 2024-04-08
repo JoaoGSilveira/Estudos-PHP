@@ -18,4 +18,8 @@
     foreach($produto->getCategoria() as $objeto_categoria){
         echo "Descritivo: {$objeto_categoria->getDescritivo()}<br>";
     }
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 7a03b2e631817bb23138916957a93bdc135e4180
