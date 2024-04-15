@@ -4,8 +4,24 @@
         public function __construct(
             private string $nome = "",
             private string $cpf = "",
-            private string $celular = ""
-        ){}
+            private string $celular = "",
+            $logradouro = "",
+            $numero = "",
+            $bairro = "",
+            $cep = ""
+        ){
+            $this->endereco[] = new Endereco($logradouro, $numero, $bairro, $cep);
+        }   
+
+            public function getEndereco()
+            {
+                return $this->endereco;
+            }
+
+            public function setEndereco($logradouro, $numero, $bairro, $cep)
+            {
+                $this->endereco[] = new Endereco($logradouro, $numero, $bairro, $cep);
+            }
 
             public function getNome()
             {
