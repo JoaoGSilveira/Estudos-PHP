@@ -6,7 +6,11 @@
 
     $categoria2 = new Categoria("Material de Escritório");
 
-    $produto = new Produto("Lápis Preto", "Lápis Preto Número 2", 2.20, array($categoria1, $categoria2));
+    $produto = new Produto("
+    Lápis Preto",
+    "Lápis Preto Número 2", 
+    2.20, 
+    array($categoria1, $categoria2));
 
     echo "<h1>Produto</h1>";
     echo "Nome: {$produto->getNome()}<br>";

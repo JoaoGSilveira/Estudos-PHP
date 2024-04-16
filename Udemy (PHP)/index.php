@@ -1,13 +1,26 @@
 <?php
-    require_once "Carro.class.php";
+require_once 'Cartao.class.php';
 
-    $carro1 = new Carro();
+    $cliente1 = new Cartao('Cartão Desativado', "Maria", 2000, '');
 
-    $carro1 -> validar("Gol G4", "Chumbo");
+    $cliente1->ativarCartao();
 
-    $carro1 -> exibir();
+    $cliente1->comprar(30);
+    $cliente1->comprar(30);
+    $cliente1->comprar(30);
 
-    /*echo "<pre>";
-    echo var_dump($carro1);
-    echo "</pre>";*/
+    $cliente1->desativarCartao();
+
+    $cliente1->comprar(30);
+    $cliente1->comprar(30);
+    $cliente1->comprar(30);
+
+    $cliente1->ativarCartao();
+
+    $cliente1->comprar(30);
+
+    echo "Nome do Titular: {$cliente1->getTitular()}<br>";
+    echo "Status do Cartão: {$cliente1->getStatus()}<br>";
+    echo "Saldo: {$cliente1->getSaldo()}<br>";
+    echo "Mensagem: {$cliente1->getMsg()}<br>";
 ?>
