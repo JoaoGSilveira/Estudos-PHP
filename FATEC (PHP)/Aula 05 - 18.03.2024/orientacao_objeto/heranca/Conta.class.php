@@ -1,5 +1,5 @@
 <?php	
-	class Conta
+	abstract class Conta
 	{
 		public function __construct(protected string $agencia = "", protected string $numero = "", protected float $saldo = 0.00){}
 		//métodos gets e sets
@@ -32,12 +32,16 @@
 			$this->saldo = $saldo;
 		}
 		
-		public function retirada()
+		public function retirada($valor)
 		{
+			//$this->saldo = $this->saldo - $valor;
+			$this->saldo -= $valor;
 		}
 		
-		public function deposito()
+		public function deposito($valor)
 		{
+			//$this->saldo = $this->saldo + $valor;
+			$this->saldo += $valor;
 		}
 	}
 ?>

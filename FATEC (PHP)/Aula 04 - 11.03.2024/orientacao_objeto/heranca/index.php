@@ -10,19 +10,15 @@
 	var_dump($corrente);
 	echo "</pre>";
 	
-	/*$conta = new Conta("987-0", "9876-5", 20000);
+	$conta = new Conta("987-0", "9876-5", 20000);
 	
 	echo "<pre>";
 	var_dump($conta);
 	echo "</pre>";
-	*/
+	
 	$poupanca = new Poupanca(25, "0123-4", "12345-6", 500.00);
 	
 	echo "<pre>";
 	var_dump($poupanca);
 	echo "</pre>";
-
-	$corrente -> retirada(1500);
-
-	echo "Saldo = {$corrente -> getSaldo()}";
 ?>

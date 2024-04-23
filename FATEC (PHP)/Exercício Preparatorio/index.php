@@ -25,7 +25,7 @@ foreach ($ingredientes->getNome() as $index => $nome) {
 $avaliacao = new Avaliacao('16/04/2024', 8.5);
 
 echo "<br>Detalhes da avaliação:<br>";
-echo "Data da Avaliação: " . $avaliacao->getDataAvaliacao()->format('d/m/Y') . PHP_EOL;
+echo "Data da Avaliação: " . $avaliacao->getDataAvaliacao()->format('d/m/Y') . "<br>";
 echo "Nota: " . $avaliacao->getNota();
 
 $receita2 = new Receita(['Passo 1: Pré-aqueça o forno', 'Passo 2: Misture os ingredientes', 'Passo 3: Asse por 30 minutos']);
@@ -38,7 +38,7 @@ foreach ($receita2->getModoPreparar() as $index => $modo) {
 $avaliacao2 = new Avaliacao('17/04/2024', 9.2);
 
 echo "<br>Detalhes da segunda avaliação:<br>";
-echo "Data da Avaliação: " . $avaliacao2->getDataAvaliacao()->format('d/m/Y') . PHP_EOL;
-echo "Nota: " . $avaliacao2->getNota() . PHP_EOL;
+echo "Data da Avaliação: " . $avaliacao2->getDataAvaliacao()->format('d/m/Y') . "<br>";
+echo "Nota: " . $avaliacao2->getNota() . "<br>";
 
 ?>
